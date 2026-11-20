@@ -1,0 +1,1 @@
+Trigger a fresh APK build so the SHA-256 workflow can calculate the checksum.
