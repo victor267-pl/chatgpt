@@ -47,3 +47,10 @@ jobs:
           git add releases/LiquidGlassCalculator.apk
           git commit -m "Publish Liquid Glass Calculator APK" || echo "APK unchanged"
           git push
+
+      - name: Calculate and publish SHA-256
+        run: |
+          sha256sum releases/LiquidGlassCalculator.apk > releases/LiquidGlassCalculator.apk.sha256
+          git add releases/LiquidGlassCalculator.apk.sha256
+          git commit -m "Publish APK SHA-256 checksum" || echo "Checksum unchanged"
+          git push
