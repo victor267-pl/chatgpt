@@ -1,6 +1,8 @@
 name: Calculate APK SHA-256
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - 'releases/LiquidGlassCalculator.apk'
 permissions:
   contents: write
 jobs:
